@@ -1,0 +1,111 @@
+{
+ "name": "steno_fact_in",
+ "args": {
+  "data": "data/steno",
+  "name": "steno_fact_in",
+  "embed": "factored_mlp",
+  "head": "softmax",
+  "n_layer": 6,
+  "n_head": 6,
+  "n_embd": 384,
+  "block": 512,
+  "batch": 32,
+  "steps": 3000,
+  "lr": 0.0006,
+  "warmup": 200,
+  "wd": 0.1,
+  "eval_every": 500,
+  "eval_batches": 40,
+  "seed": 1,
+  "compile": false,
+  "out": "runs"
+ },
+ "vocab_size": 18598,
+ "params_body": 10823424,
+ "params_total": 18122112,
+ "train_tokens_seen": 49152000,
+ "train_bytes_available": 62763988,
+ "train_tokens_available": 13871680,
+ "final": {
+  "fiction": {
+   "nats_per_token": 4.858279992287486,
+   "bits_per_byte": 1.742722920369044,
+   "tokens": 515072,
+   "bytes": 2071556,
+   "top1_acc": 0.20661771558151093
+  },
+  "court": {
+   "nats_per_token": 4.20379351340432,
+   "bits_per_byte": 1.2411427430748985,
+   "tokens": 675328,
+   "bytes": 3299962,
+   "top1_acc": 0.26128932903714935
+  }
+ },
+ "log": [
+  {
+   "step": 0,
+   "positions": 0,
+   "time": 2.0498080253601074,
+   "val_fiction_nats": 9.841794514656067,
+   "val_court_nats": 9.84079089164734,
+   "val_fiction_bpb": 3.53339162892197,
+   "val_court_bpb": 2.906432046793416
+  },
+  {
+   "step": 500,
+   "positions": 8192000,
+   "time": 38.31564950942993,
+   "val_fiction_nats": 5.745455884933472,
+   "val_court_nats": 5.335806441307068,
+   "val_fiction_bpb": 2.062728062238337,
+   "val_court_bpb": 1.5759057383959452
+  },
+  {
+   "step": 1000,
+   "positions": 16384000,
+   "time": 74.4236752986908,
+   "val_fiction_nats": 5.277081835269928,
+   "val_court_nats": 4.782780420780182,
+   "val_fiction_bpb": 1.8945728600726182,
+   "val_court_bpb": 1.412572062630693
+  },
+  {
+   "step": 1500,
+   "positions": 24576000,
+   "time": 110.70814299583435,
+   "val_fiction_nats": 5.086721098423004,
+   "val_court_nats": 4.501123213768006,
+   "val_fiction_bpb": 1.826229730875123,
+   "val_court_bpb": 1.3293859100456054
+  },
+  {
+   "step": 2000,
+   "positions": 32768000,
+   "time": 147.50714945793152,
+   "val_fiction_nats": 4.959903836250305,
+   "val_court_nats": 4.335234844684601,
+   "val_fiction_bpb": 1.7806999190205341,
+   "val_court_bpb": 1.2803915479660763
+  },
+  {
+   "step": 2500,
+   "positions": 40960000,
+   "time": 184.8974735736847,
+   "val_fiction_nats": 4.895843040943146,
+   "val_court_nats": 4.253730475902557,
+   "val_fiction_bpb": 1.7577008737200732,
+   "val_court_bpb": 1.256319609847478
+  },
+  {
+   "step": 3000,
+   "positions": 49152000,
+   "time": 222.31555891036987,
+   "val_fiction_nats": 4.865557253360748,
+   "val_court_nats": 4.206106734275818,
+   "val_fiction_bpb": 1.7468276993046155,
+   "val_court_bpb": 1.2422541581600888
+  }
+ ],
+ "seconds": 224.28460144996643
+}

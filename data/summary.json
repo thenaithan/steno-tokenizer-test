@@ -1,0 +1,25 @@
+{
+ "vocab_size": 18598,
+ "train_bytes": 62763988,
+ "steno_train_tokens": 13871680,
+ "bpe_train_tokens": 14498682,
+ "bytes_per_token": {
+  "steno": 4.52461331287919,
+  "bpe": 4.328944382668714
+ },
+ "steno_oov_rate_train": 0.012480666742302129,
+ "val": {
+  "fiction": {
+   "bytes": 2071556,
+   "steno_tokens": 515513,
+   "bpe_tokens": 515262,
+   "steno_unk_rate": 0.0005741853260732514
+  },
+  "court": {
+   "bytes": 3299962,
+   "steno_tokens": 675561,
+   "bpe_tokens": 737778,
+   "steno_unk_rate": 0.0003508195410925142
+  }
+ }
+}

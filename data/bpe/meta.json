@@ -1,0 +1,1 @@
+{"vocab_size": 18598, "train_tokens": 14498682, "train_bytes": 62763988, "val": {"fiction": {"tokens": 515262, "bytes": 2071556}, "court": {"tokens": 737778, "bytes": 3299962}}}
