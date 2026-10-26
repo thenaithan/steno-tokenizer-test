@@ -1,0 +1,21 @@
+done court
+done fiction
+done technical
+
+Positions per word (lower is cheaper to decode)
+corpus          words   oov%     llama3_128k        bpe_200k  superbpe_t180k    steno_plover     steno_ideal
+court          122973   0.8%           1.255           1.313           0.843           1.196           1.167
+fiction        335900   1.7%           1.393           1.356           1.021           1.367           1.289
+technical      146021   5.3%           1.700           1.873           1.544           2.324           2.065
+
+Bytes per position (higher is denser)
+corpus          bytes     llama3_128k        bpe_200k  superbpe_t180k    steno_plover     steno_ideal
+court          713032            4.62            4.42            6.88            4.85            4.97
+fiction       1925455            4.11            4.23            5.62            4.19            4.45
+technical     1021087            4.11            3.73            4.53            3.01            3.39
+
+Steno positions relative to each BPE tokenizer (>1.0 = steno needs MORE positions)
+corpus          plover/llama3_128k       plover/bpe_200k plover/superbpe_t180k     ideal/llama3_128k        ideal/bpe_200k  ideal/superbpe_t180k
+court                        0.953                 0.911                 1.419                 0.930                 0.889                 1.384
+fiction                      0.981                 1.008                 1.339                 0.925                 0.950                 1.262
+technical                    1.367                 1.241                 1.505                 1.215                 1.102                 1.337

@@ -11,4 +11,4 @@ dl/
 __pycache__/
 *.pyc
 *.log
-*.tar.gz
+*.tar.gzcorpus/

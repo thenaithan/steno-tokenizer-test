@@ -1,0 +1,41 @@
+[
+ {
+  "corpus": "court",
+  "chars": 713032,
+  "bytes": 713032,
+  "words": 122973,
+  "steno_plover": 147054,
+  "steno_ideal": 143461,
+  "oov_words": 1034,
+  "oov_rate": 0.008408349800362681,
+  "llama3_128k": 154332,
+  "bpe_200k": 161406,
+  "superbpe_t180k": 103629
+ },
+ {
+  "corpus": "fiction",
+  "chars": 1902829,
+  "bytes": 1925455,
+  "words": 335900,
+  "steno_plover": 459141,
+  "steno_ideal": 432815,
+  "oov_words": 5841,
+  "oov_rate": 0.01738910389997023,
+  "llama3_128k": 468065,
+  "bpe_200k": 455633,
+  "superbpe_t180k": 342838
+ },
+ {
+  "corpus": "technical",
+  "chars": 1020622,
+  "bytes": 1021087,
+  "words": 146021,
+  "steno_plover": 339356,
+  "steno_ideal": 301481,
+  "oov_words": 7785,
+  "oov_rate": 0.05331424932030324,
+  "llama3_128k": 248173,
+  "bpe_200k": 273562,
+  "superbpe_t180k": 225446
+ }
+]
