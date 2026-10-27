@@ -180,22 +180,26 @@ Full logs with the training curves: `runs/*.json`.
 
 ## Conclusion
 
-Strokes are a human-curated compression of English speech, and against a learned
-compression at production vocabulary size they lose. SuperBPE finds four times as
-many multi-word units as Plover's brief dictionary, and finds them for every
-register, not only the one steno was built for. The one place steno was ahead, 4.5%
-denser at an equal 18.6k vocabulary, is a vocabulary-size effect that production
-tokenizers have already moved past.
+Strokes are a human-curated compression of English speech, and the intuition behind them 
+holds up: there is real slack in tokenizers that respect word boundaries, and a court 
+reporter’s brief dictionary finds some of it. On spoken-register text steno needs 5 to 9% 
+fewer positions than Llama 3 and OLMo2 BPE, and at an equal 18.6k vocabulary it is 4.5% 
+denser than BPE trained on the same text. But SuperBPE takes the same slack by a different 
+route. It is BPE with one change, the pretokeniser stops splitting on whitespace partway 
+through training, so merges can cross word boundaries and the algorithm discovers 
+superwords from frequency. It finds about four times as many multi-word units as Plover’s
+dictionary, and finds them for every register, including code, where phonetic units have 
+nothing to say. Against a learned compression at production vocabulary size, strokes lose.
+The diagnosis was right; the remedy had already been published, and it was better.
 
-On the representation side the chord bits carry nothing the model wants. The ID
-model ties BPE and its embeddings show no linear trace of the keys; feeding the keys
-in costs 4%; making the model emit keys fails, because a 23-way factored head cannot
-hedge between two homophone strokes without putting mass on every mixture of them.
+On the representation side the chord bits carry nothing the model wants. The ID model ties 
+BPE and its embeddings show no linear trace of the keys; feeding the keys in costs 4%; 
+making the model emit keys fails, because a 23-way factored head cannot hedge between two
+homophone strokes without putting mass on every mixture of them.
 
-None of this is a ceiling on phonetic tokenization in general. The Vietnamese and
-Chinese result (§6) says a tone-and-rime factorisation can work where the phonology
-does the work. For English through a stenotype dictionary it does not, and I am not
-continuing this.
+None of this is a ceiling on phonetic tokenization in general. The Vietnamese and Chinese 
+result (§6) says a tone-and-rime factorisation can work where the phonology does the work. 
+For English through a stenotype dictionary it does not, and I am not continuing this.
 
 ## Repository
 
