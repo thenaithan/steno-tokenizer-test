@@ -5,6 +5,7 @@ import json
 import sys
 
 runs = [json.load(open(f)) for f in sorted(glob.glob((sys.argv[1] if len(sys.argv) > 1 else "runs") + "/*.json"))]
+runs = [r for r in runs if isinstance(r, dict) and "final" in r]   # skip strokes_per_word.json (Experiment 1)
 if not runs:
     sys.exit("no runs found")
 regs = list(runs[0]["final"].keys())
